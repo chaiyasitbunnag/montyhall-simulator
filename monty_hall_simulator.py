@@ -11,7 +11,7 @@ def switch(doors):
     random_point = random.choice([0,1,2]) # Randomly select the door
     # Opened 'goat' from the other two doors
     opened = [idx for idx, element in enumerate(doors) if element == 'goat' and idx != random_point]
-    opened = random.choice(opened)
+    opened = random.choice(opened) # Random from two goats
     # Switch to the door which hasn't been selected and opened
     switched = [element for idx, element in enumerate(doors) if idx not in [random_point, opened]][0]
     
